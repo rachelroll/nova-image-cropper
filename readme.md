@@ -9,12 +9,12 @@ This field extends Image Field adding a handy cropper to manipulate images. Can 
 ### Install
 
 Run this command into your nova project:
-`composer require r64/nova-image-cropper`
+`composer require rachel/nova-image-cropper`
 
 ### Add it to your Nova Resource:
 
 ```php
-use R64\NovaImageCropper\ImageCropper;
+use Rachel\NovaImageCropper\ImageCropper;
 
 ImageCropper::make('Photo'),
 ```
@@ -24,7 +24,7 @@ ImageCropper::make('Photo'),
 In order to edit the existing image saved in the model, ImageCroper uses the preview method to return a base64 encoded image. You can either use the default implementation or override it as long as you return a base64 image.
 
 ```php
-use R64\NovaImageCropper\ImageCropper;
+use Rachel\NovaImageCropper\ImageCropper;
 
 ImageCropper::make('Photo')
         ->preview(function () {
